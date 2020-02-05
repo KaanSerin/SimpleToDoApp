@@ -1,0 +1,110 @@
+html {
+    /* used to adjust the size of the trash icon */
+    --font-size: 0px;
+}
+
+.grid {
+    display: grid;
+    grid-template-rows: 1fr 12fr 1fr;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html, body, .grid {
+    height: 100%;
+}
+
+.header {
+    align-self: center;
+    text-align: center;
+}
+
+.appName {
+    color: white;
+    font-weight: bold;
+}
+
+.grid {
+    background-color: rgb(43, 43, 43);
+}
+
+.main {
+    padding: 1rem;
+    /* text-align: center; */
+    background: rgb(255, 122, 144);
+    height: 100%;
+}
+
+#toDoInput {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-column-gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+#listContainer {
+    margin: auto;
+    height: 99%;
+    width: 70%;
+    padding: 1rem 1rem 1rem;
+    border: 2px solid rgb(43, 43, 43);
+    border-radius: 1rem;
+}
+
+.toDo {
+    text-align: center;
+    font-size: 1.2rem;
+    list-style: none;
+    background: rgba(255, 255, 255, 0.541);
+    margin-bottom: .5rem;
+    transition: background-color .4s;
+}
+
+.toDo:hover {
+    background-color: lightsalmon;
+    --font-size: 1.2rem;
+}
+
+.footer {
+    align-self: center;
+    text-align: center;
+    color: white;
+}
+
+.fa-trash {
+    transition: font-size .4s;
+    font-size: var(--font-size);
+    margin-top: .2rem;
+    margin-left: 1rem;
+    color: red;
+    float: left;
+}
+
+@media only screen and (max-width: 500px) {
+    .main {
+        background-color: rgb(255, 155, 197);
+    }
+    #listContainer {
+        width: 90%;
+    }
+}
+
+@media only screen and (min-width: 789px) {
+    .main {
+        background-color: #29c2ff;
+    }
+    #listContainer {
+        width: 50%;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .main {
+        background-color: rgb(94, 218, 94);
+    }
+    #listContainer {
+        width: 40%;
+    }
+}
